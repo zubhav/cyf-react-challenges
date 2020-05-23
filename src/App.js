@@ -25,7 +25,6 @@ const App = () => {
   const [babyNames, setBabyNames] = useState(babyNamesData);
   const [favourites, setFavourites] = useState([]);
   const [gender, setGender] = useState("a");
-
   sortArrByAttr(babyNames, "name"); // sort names alphabetically A-Z
 
   let filteredBabyNames = babyNames;
@@ -67,7 +66,12 @@ const App = () => {
       </section>
 
       <section>
-        <FavouriteList items={favourites} />
+        <FavouriteList
+          items={babyNames}
+          favourites={favourites}
+          setFavourites={setFavourites}
+          onItemClick={setBabyNames}
+        />
       </section>
 
       <hr />
@@ -76,6 +80,8 @@ const App = () => {
         <BabyNameList
           items={filteredBabyNames}
           favourites={favourites}
+          allBabyNames={babyNames}
+          setBabyNames={setBabyNames}
           onItemClick={setFavourites}
         />
       </section>
