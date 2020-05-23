@@ -1,68 +1,121 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Challenge: "Baby Name Picker (React)"
 
-## Available Scripts
+![Example Screenshot from the finished challenge](./example-screenshots/finished.png)
 
-In the project directory, you can run:
+## Challenge Overview
 
-### `yarn start`
+Make a React app which shows some baby names and lets you pick your favourites. The names data is provided for you.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Difficulty Level
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+This is a beginner challenge, suitable from students who have completed at least week 2 of the CYF React module.
 
-### `yarn test`
+(Level one can be completed by any student who has started the React module.)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Pre-requisites - what do I need to know to finish this challenge?
 
-### `yarn build`
+- React `props`
+- The `array.map` method as used in React JSX
+- Event handlers: onClick for buttons
+- Event handlers: onChange for input fields
+- The `useState` hook
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Getting Started
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Don't clone this repo.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Make your own React app using create-react-app.
 
-### `yarn eject`
+### The data:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+The data is available in the file [./babyNamesData.json](./babyNamesData.json).
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Copy across this file to your src/ directory, and then import it.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Hosting:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Add your project in github and host it on Netlify.
 
-## Learn More
+The github repo name should be exactly:
+`baby-names-react`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The netlify site suffix should be `-baby-names`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+so...
 
-### Code Splitting
+`cyf-YOURGITHUBUSERNAME-baby-names`
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+# Level 1 Challenge
 
-### Analyzing the Bundle Size
+Write a react app which lists baby names from the given file.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+It should display boys' and girls' names differently.
 
-### Making a Progressive Web App
+The names should be displayed in alphabetical order, ascending.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+Your project should be on GitHub and hosted with correct names (see Hosting, above).
 
-### Advanced Configuration
+### Example Screenshot
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+Note only the list of names is important here. The other elements in the screenshot can be ignored.
 
-### Deployment
+![Level 1 Example Screenshot](./example-screenshots/level-1.png)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+# Level 2 challenge
 
-### `yarn build` fails to minify
+Add a search bar.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+When someone types into it, your app should update the displayed list of baby names to only show matches.
+
+Matches should be case-insensitive.
+
+When the search bar is clear, all names should be shown.
+
+### Example Screenshot
+
+![Level 2 Example Screenshot](./example-screenshots/level-2.png)
+
+# Level 3 challenge
+
+Add "favourites".
+
+When the user clicks a name from the main list, it should be moved to a "favourites" list, displayed separately.
+
+When the user clicks a name from the _favourites_ list, it should be moved back to the main list.
+
+### Example Screenshot
+
+![Level 3 Example Screenshot](./example-screenshots/level-3.png)
+
+# Level 4 challenge
+
+Add "name gender" filter buttons.
+
+Add buttons that allow the user to only see boy or girl names (or all names).
+
+The buttons should operate as "radio" buttons - exactly one should be active at any time.
+
+The app should start by showing all names.
+
+The app should make it clear which filter is in effect.
+
+_How it works with search:_
+
+If there is also a search term in effect, your app should apply any name gender filter to those search results.
+
+### Example Screenshot
+
+![Level 4 Example Screenshot](./example-screenshots/level-4.png)
+
+# Beyond - ideas for more work
+
+- Find a way to persist the favourites even after the browser tab is closed
+- Add the ability for the user to shuffle the list of names
+- Add the ability for the user to be presented with one or two randomly chosen names.
+- Find an attractive way to differentiate names by gender that doesn't use blue/pink stereotypes.
+
+## Further resources
+
+# Credits
+
+This application idea, and look, were taken from [Simon Vrachliotis'](https://simonswiss.com/) app, found via [react.rocks](https://react.rocks/example/Baby_name_inspiration).
